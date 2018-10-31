@@ -1,7 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
-
-@import "~@angular/material/prebuilt-themes/purple-green.css";
+@import "./app/angular-material/theme.scss";
 
 body {
   margin: 0;
+  font-family: "Open Sans", sans-serif;
+  font-size: 15px;
 }

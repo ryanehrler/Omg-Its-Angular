@@ -1,0 +1,10 @@
+@import "~@angular/material/theming";
+@import "./variables.scss";
+
+@include mat-core();
+
+// Define the default theme (same as the example above).
+$main-app-theme: mat-dark-theme($app-primary, $app-accent, $app-warn);
+
+// Include the default theme styles.
+@include angular-material-theme($main-app-theme);
