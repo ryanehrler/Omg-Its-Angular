@@ -1,3 +1,46 @@
-ul {
-  list-style: none;
+@import '../../../angular-material/variables.scss';
+
+.mat-expansion-panel {
+  border-radius: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  box-shadow: none;
+
+  &:not(:first-child) {
+    border-top: 1px solid rgba(255, 255, 255, 0.8);
+  }
+  .mat-expansion-panel-header {
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 0;
+
+    .mat-expansion-panel-header-title {
+      font-weight: bold;
+      color: rgba(255, 255, 255, 0.87);
+    }
+  }
+
+  ul {
+    list-style: none;
+    padding-inline-start: 0;
+    margin-block-start: 0;
+    margin-block-end: 0;
+
+    li {
+      padding-bottom: 5px;
+      &:hover {
+        cursor: pointer;
+        a {
+          color: $primary;
+        }
+      }
+      a {
+        color: rgba(255, 255, 255, 0.87);
+        text-decoration: none;
+        font-size: 15px;
+
+        &.active {
+          color: $primary;
+        }
+      }
+    }
+  }
 }

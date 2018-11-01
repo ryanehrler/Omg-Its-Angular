@@ -1,31 +1,10 @@
-<mat-accordion>
-  <mat-expansion-panel>
-    <mat-expansion-panel-header>
-      <mat-panel-title>
-        Getting Started
-      </mat-panel-title>
-    </mat-expansion-panel-header>
-    <ul>
-      <li><a href="">Who is the target audience?</a></li>
-      <li><a href="">Setting Up Your Environment</a></li>
-      <li><a href="">Angular Building Blocks</a></li>
-      <li><a href="">Angular Modules</a></li>
-      <li><a href="">Why Core Module?</a></li>
-      <li><a href="">Why Shared Module?</a></li>
-    </ul>
-  </mat-expansion-panel>
-  <mat-expansion-panel>
-    <mat-expansion-panel-header>
-      <mat-panel-title>
-        Peace Meal
-      </mat-panel-title>
-    </mat-expansion-panel-header>
-    <ul>
-      <li><a href="">Components</a></li>
-      <li><a href="">Services</a></li>
-      <li><a href="">Directives</a></li>
-      <li><a href="">Modules</a></li>
-      <li><a href="">Angular Routing</a></li>
-    </ul>
-  </mat-expansion-panel>
-</mat-accordion>
+<mat-expansion-panel *ngFor="let section of sections" [expanded]="section.opened">
+  <mat-expansion-panel-header>
+    <mat-panel-title>
+      {{section.headerTitle}}
+    </mat-panel-title>
+  </mat-expansion-panel-header>
+  <ul>
+    <li *ngFor="let route of section.routes"><a [routerLink]="route.path" routerLinkActive="active">{{route.title}}</a></li>
+  </ul>
+</mat-expansion-panel>
