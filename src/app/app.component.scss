@@ -11,7 +11,7 @@ $grid-gap: 2em;
   grid-template-rows: 100px auto 100px;
   grid-template-areas:
     'header header header header'
-    'sidebar content content content'
+    'sidebar content content right-bar'
     'footer footer footer footer';
   grid-gap: $grid-gap;
 
