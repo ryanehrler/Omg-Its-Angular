@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TargetAudienceComponent } from './target-audience.component';
+import { IntroComponent } from './intro.component';
 
-describe('TargetAudienceComponent', () => {
-  let component: TargetAudienceComponent;
-  let fixture: ComponentFixture<TargetAudienceComponent>;
+describe('IntroComponent', () => {
+  let component: IntroComponent;
+  let fixture: ComponentFixture<IntroComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TargetAudienceComponent ]
+      declarations: [ IntroComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(TargetAudienceComponent);
+    fixture = TestBed.createComponent(IntroComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

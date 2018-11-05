@@ -11,11 +11,7 @@ export class SideNavComponent implements OnInit {
       headerTitle: 'Getting Started',
       opened: true,
       routes: [
-        { title: 'Intro', path: '/intro/getting-started' },
-        {
-          title: 'Who is the target audience?',
-          path: '/intro/target-audience'
-        },
+        { title: 'Intro', path: '/intro/intro' },
         {
           title: 'Setting up your environment',
           path: '/intro/setting-up-environment'
