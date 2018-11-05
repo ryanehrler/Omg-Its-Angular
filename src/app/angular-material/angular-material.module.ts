@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import {
   MatButtonModule,
+  MatCardModule,
   MatExpansionModule,
   MatFormFieldModule,
   MatIconModule,
@@ -17,7 +18,8 @@ import { NgModule } from '@angular/core';
     MatInputModule,
     MatIconModule,
     MatFormFieldModule,
-    MatExpansionModule
+    MatExpansionModule,
+    MatCardModule
   ],
   declarations: []
 })
