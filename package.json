@@ -10,7 +10,7 @@
     "e2e": "ng e2e",
     "lint-fix": "node_modules/.bin/tslint --fix --project tsconfig.json",
     "format-ts": "node_modules/.bin/prettier --write --list-different \"src/**/*.ts\"",
-    "lint-format": "npm run lint && npm run format-ts",
+    "lint-format": "npm run lint-fix && npm run format-ts",
     "check-for-tslint-prettier-conflicts": "node_modules/.bin/tslint-config-prettier-check ./tslint.json"
   },
   "private": true,
