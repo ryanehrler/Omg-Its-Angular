@@ -1,27 +1,29 @@
 @import '../../../angular-material/variables.scss';
 
 .header-container {
-  display: grid;
-  grid-template-columns: 1fr 3fr 1fr;
-  grid-template-rows: minmax(100px, auto);
-  grid-gap: 10px 10px;
-  grid-template-areas: 'logo main right';
-  justify-items: start;
-  align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: minmax(100px, auto);
+    grid-gap: 10px 10px;
+    grid-template-areas: 'logo main right';
+    justify-items: start;
+    align-items: center;
 
-  .title {
-    grid-area: logo;
-    color: $primary;
-    font-family: 'Spicy Rice', cursive;
-    font-size: 35px;
-    text-shadow: 2px 1.5px 0 #7a7a7a;
-    // text-shadow: -2px -2px 2px rgba(255, 255, 255, 0.1),
-    //   2px 2px 2px rgba(0, 0, 0, 0.5);
-  }
-  .header-buttons {
-    grid-area: main;
-  }
-  .header-right {
-    grid-area: right;
-  }
+    .title {
+        grid-area: logo;
+        color: $primary;
+        font-family: 'Spicy Rice', cursive;
+        font-size: 35px;
+        text-shadow: 2px 1.5px 0 #7a7a7a;
+        // text-shadow: -2px -2px 2px rgba(255, 255, 255, 0.1),
+        //   2px 2px 2px rgba(0, 0, 0, 0.5);
+    }
+
+    .header-buttons {
+        grid-area: main;
+    }
+
+    .header-right {
+        grid-area: right;
+    }
 }

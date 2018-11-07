@@ -11,7 +11,8 @@
         "lint-fix": "node_modules/.bin/tslint --fix --project tsconfig.json",
         "format-ts": "node_modules/.bin/prettier --write --list-different \"src/**/*.ts\"",
         "format-html": "node_modules/.bin/glob-run html-beautify -r \"src/**/*.html\"",
-        "lint-format": "npm run lint-fix && npm run format-ts && npm run format-html",
+        "format-css": "node_modules/.bin/glob-run css-beautify -r \"src/**/*.scss\"",
+        "lint-format": "npm run lint-fix && npm run format-ts && npm run format-html && npm run format-css",
         "check-for-tslint-prettier-conflicts": "node_modules/.bin/tslint-config-prettier-check ./tslint.json"
     },
     "private": true,

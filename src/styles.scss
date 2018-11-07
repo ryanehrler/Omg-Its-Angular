@@ -2,12 +2,12 @@
 @import './app/angular-material/theme.scss';
 
 body {
-  margin: 0;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 15px;
-  color: white;
-
-  [class*='mat'] {
+    margin: 0;
     font-family: 'Open Sans', sans-serif;
-  }
+    font-size: 15px;
+    color: white;
+
+    [class*='mat'] {
+        font-family: 'Open Sans', sans-serif;
+    }
 }
