@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ImageService } from 'src/app/core/services';
 
 @Component({
   selector: 'app-setting-up-environment',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./setting-up-environment.component.scss']
 })
 export class SettingUpEnvironmentComponent implements OnInit {
-  constructor() {}
+  constructor(public imageService: ImageService) {}
 
   ngOnInit() {}
 }
