@@ -7,7 +7,7 @@ import {
   MatIconModule,
   MatInputModule,
   MatToolbarModule
-  } from '@angular/material';
+} from '@angular/material';
 import { NgModule } from '@angular/core';
 
 @NgModule({

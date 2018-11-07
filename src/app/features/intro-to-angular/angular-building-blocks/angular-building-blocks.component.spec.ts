@@ -8,9 +8,8 @@ describe('AngularBuildingBlocksComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AngularBuildingBlocksComponent ]
-    })
-    .compileComponents();
+      declarations: [AngularBuildingBlocksComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {

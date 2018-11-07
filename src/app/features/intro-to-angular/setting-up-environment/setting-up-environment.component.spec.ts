@@ -8,9 +8,8 @@ describe('SettingUpEnvironmentComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SettingUpEnvironmentComponent ]
-    })
-    .compileComponents();
+      declarations: [SettingUpEnvironmentComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {

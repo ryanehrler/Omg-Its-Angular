@@ -8,9 +8,8 @@ describe('WhySharedModuleComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ WhySharedModuleComponent ]
-    })
-    .compileComponents();
+      declarations: [WhySharedModuleComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {

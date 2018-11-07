@@ -8,9 +8,8 @@ describe('WhyCoreModuleComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ WhyCoreModuleComponent ]
-    })
-    .compileComponents();
+      declarations: [WhyCoreModuleComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {
