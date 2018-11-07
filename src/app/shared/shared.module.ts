@@ -1,10 +1,10 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { EmojifyModule } from 'angular-emojify';
+import { NgModule } from '@angular/core';
 
 @NgModule({
-  imports: [
-    CommonModule
-  ],
+  imports: [CommonModule, EmojifyModule],
+  exports: [EmojifyModule],
   declarations: []
 })
-export class SharedModule { }
+export class SharedModule {}
