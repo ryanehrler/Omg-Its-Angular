@@ -1,10 +1,10 @@
 <mat-expansion-panel *ngFor="let section of sections" [expanded]="section.opened">
-  <mat-expansion-panel-header>
-    <mat-panel-title>
-      {{section.headerTitle}}
-    </mat-panel-title>
-  </mat-expansion-panel-header>
-  <ul>
-    <li *ngFor="let route of section.routes"><a [routerLink]="route.path" routerLinkActive="active">{{route.title}}</a></li>
-  </ul>
+    <mat-expansion-panel-header>
+        <mat-panel-title>
+            {{section.headerTitle}}
+        </mat-panel-title>
+    </mat-expansion-panel-header>
+    <ul>
+        <li *ngFor="let route of section.routes"><a [routerLink]="route.path" routerLinkActive="active">{{route.title}}</a></li>
+    </ul>
 </mat-expansion-panel>
