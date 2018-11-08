@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostBinding, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-side-nav',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./side-nav.component.scss']
 })
 export class SideNavComponent implements OnInit {
+  @HostBinding('class.side-nav') sideNav = true;
+
   sections = [
     {
       headerTitle: 'Getting Started',
@@ -35,6 +37,11 @@ export class SideNavComponent implements OnInit {
         { title: 'Modules', path: '' },
         { title: 'Angular', path: '' }
       ]
+    },
+    {
+      headerTitle: 'Services',
+      opened: false,
+      routes: [{ title: 'ProvidedIn', path: '/service-topics/provided-in' }]
     }
   ];
   constructor() {}

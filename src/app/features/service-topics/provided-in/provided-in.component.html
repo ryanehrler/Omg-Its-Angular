@@ -1,0 +1,59 @@
+<h1>@Injector({{'{'}}providedIn: 'root'{{'}'}})</h1>
+<p>Huh? Why? When I first heard of the new providedIn attribute I had mixed feeling. To me the providers array makes
+    perfect sense once I fully understood how DI works in Angular. When I first started I was thoroughly confused of
+    course, but does providedIn make that clearer? Maybe.</p>
+<h1>So why the new attribute?</h1>
+<p>Simple: <b>Tree Shaking.</b> The Angular team is obssessed with tree shaking at the moment. What is tree shaking?
+    The simple explanation is: Tree shaking allows your application to deliver only the code which is absolutely
+    needed.
+    So if you have 200 singleton services but the user is on the home page and only needs 10 of those services, then a
+    tree shook? application will only deliver those 10 services and will load the other 180 as they are needed.
+</p>
+<h1>How does providedIn do this?</h1>
+<p>It does this by enabling a service to be self contained. Examples are our friend so lets see the "old way" first.</p>
+<app-frameless-image [src]="imageService.images.service_topics.providedIn.providers_array"></app-frameless-image>
+<p>
+    The import statement is what tells our application "Hey I need this service" and in return that reference (code)
+    will be bundled wherever the import statement is located. Since this import statement is in our Core module the
+    service will be
+    bundled with our initial application load.
+</p>
+<app-frameless-image [src]="imageService.images.service_topics.providedIn.network_tab_providers_array"></app-frameless-image>
+<p>
+    You may be saying to yourself right now, "So, who cares?". Most people
+    and most applications don't really need to care about this. Most services aren't very large in size and thus you
+    aren't saving much by having the service load later. Most of these benefits will be with 3rd party libraries.
+    For example, let us pretend you are using Angular Material and you only use a few components. Angular Material
+    may have 30 "root" services, but you only need the ones which pertain to your components. Now only those 2 services
+    you are using will be bundled with your application and the other 28 won't be.
+</p>
+<app-framed-image [src]="imageService.images.service_topics.providedIn.lazy_route">
+    <div><b>Side Note:</b></div>
+    A {{ ':bulb:' | emojify }} should be going off right about now if you wondered why a lazy
+    loaded module needs to be setup as a string in your router.module and not as a hard reference with an import
+    statement.
+</app-framed-image>
+<p>Now let's take a look at the new providedIn and examine the network tab again. the providedIn attribute located in
+    the @Injectable decorator tells angular where to inject the service when it is referenced.
+</p>
+<app-frameless-image [src]="imageService.images.service_topics.providedIn.providedIn_service"></app-frameless-image>
+<p>Now if you check the main.js in the network tab you will no longer find the my.service.ts anymore, because the
+    service isn't referenced anywhere in our application. What happens if the service is referenced in a lazy loaded
+    module?
+</p>
+<app-frameless-image [src]="imageService.images.service_topics.providedIn.lazy_component"></app-frameless-image>
+<p>
+    If you said the service will come down in the lazy module's bundle you would be correct.
+</p>
+<app-frameless-image [src]="imageService.images.service_topics.providedIn.lazy_module_network_tab"></app-frameless-image>
+<p>
+    As you can see this allows us to provide a singleton service app wide in a lazy way. This is something that was not
+    possible before the providedIn array since the providers[] forced us to create a hard reference in either our core
+    or app module.
+</p>
+<h1>Barrels</h1>
+<p>... need content</p>
+<h1>Module Only Services</h1>
+<p>... need content</p>
+<h1>Component Only Services</h1>
+<p>... need content</p>

@@ -7,6 +7,11 @@ const routes: Routes = [
     loadChildren:
       './features/intro-to-angular/intro-to-angular.module#IntroToAngularModule'
   },
+  {
+    path: 'service-topics',
+    loadChildren:
+      './features/service-topics/service-topics.module#ServiceTopicsModule'
+  },
   { path: '', pathMatch: 'full', redirectTo: 'intro' }
 ];
 
