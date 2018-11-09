@@ -2,12 +2,20 @@
 @import './app/angular-material/theme.scss';
 
 body {
-    margin: 0;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 15px;
-    color: white;
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  line-height: 28px;
+  color: white;
 
-    [class*='mat'] {
-        font-family: 'Open Sans', sans-serif;
-    }
+  [class*='mat'] {
+    font-family: 'Open Sans', sans-serif;
+  }
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: normal;
 }
