@@ -1,10 +1,20 @@
-@import "~@angular/material/theming";
-@import "./variables.scss";
+@import '~@angular/material/theming';
+@import './variables.scss';
 
 @include mat-core();
 
-// Define the default theme (same as the example above).
 $main-app-theme: mat-dark-theme($app-primary, $app-accent, $app-warn);
-
-// Include the default theme styles.
 @include angular-material-theme($main-app-theme);
+
+@mixin header-theme($theme) {
+  $primary: map-get($theme, primary);
+  $accent: map-get($theme, accent);
+  $warn: map-get($theme, accent);
+  $foreground: map-get($theme, foreground);
+  $background: map-get($theme, background);
+
+  header-area {
+    color: mat-color($foreground, text);
+    background-color: mat-color($background, app-bar);
+  }
+}
