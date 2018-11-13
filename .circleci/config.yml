@@ -60,14 +60,13 @@ jobs:
           paths:
             - dist
           key: v1-dist-{{ .Environment.CIRCLE_BRANCH }}-{{ .Environment.CIRCLE_SHA1 }}
-
   # Deploy job
-  deploy:
-    working_directory: ~/project
-    docker:
-      - image: circleci/node:6.10-browsers
-    steps:
-      # Steps to be added
+  #deploy:
+  #working_directory: ~/project
+  #docker:
+  #  - image: circleci/node:6.10-browsers
+  #steps:
+  # Steps to be added
 
 workflows:
   version: 2
