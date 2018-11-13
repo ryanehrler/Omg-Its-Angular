@@ -48,18 +48,18 @@ jobs:
           name: Building
           command: |
             if [ "${CIRCLE_BRANCH}" == "staging" ]; then
-                        npm run build-qa
-                    elif [ "${CIRCLE_BRANCH}" == "master" ]; then
-                        npm run build-prod
-                    else
-                        npm run build-dev
-                    fi
+                npm run build-qa
+            elif [ "${CIRCLE_BRANCH}" == "master" ]; then
+                npm run build-prod
+            else
+                npm run build-dev
+            fi
 
       # Save Dist
       - save_cache:
-        key: v1-dist-{{ .Environment.CIRCLE_BRANCH }}-{{ .Environment.CIRCLE_SHA1 }}
           paths:
             - dist
+          key: v1-dist-{{ .Environment.CIRCLE_BRANCH }}-{{ .Environment.CIRCLE_SHA1 }}
 
   # Deploy job
   deploy:
