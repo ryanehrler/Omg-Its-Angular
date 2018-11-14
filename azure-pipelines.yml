@@ -18,7 +18,7 @@ steps:
       ng build --prod
     displayName: 'npm install and build'
 
-- task: CopyFiles@2
+- task: CopyFiles@1
   inputs:
     SourceFolder: '$(System.DefaultWorkingDirectory)'
     Contents: |
