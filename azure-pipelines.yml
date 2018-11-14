@@ -23,7 +23,7 @@ steps:
       SourceFolder: '$(System.DefaultWorkingDirectory)'
       Contents: |
         **\dist\**
-        **\dist\**\**
+        **\dist\angular-guide\**
         deploy.ps1
         firebase.json
         package.json
