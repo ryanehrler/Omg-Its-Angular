@@ -22,10 +22,8 @@ steps:
     inputs:
       SourceFolder: '$(System.DefaultWorkingDirectory)'
       Contents: |
-        **
-        **\**
         **\dist\**
-        !**\node_modules\**\*
+        **\dist\*\**
         deploy.ps1
         firebase.json
         package.json
