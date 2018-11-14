@@ -18,11 +18,11 @@ steps:
       ng build --prod
     displayName: 'npm install and build'
 
-- task: CopyFiles@1
+- task: CopyFiles@2
   inputs:
     SourceFolder: '$(System.DefaultWorkingDirectory)'
     Contents: |
-      dist
+      dist\**
       package.json
       deploy.ps1
       firebase.json
