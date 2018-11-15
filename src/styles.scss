@@ -11,6 +11,8 @@ body {
   [class*='mat'] {
     font-family: 'Open Sans', sans-serif;
   }
+
+  @include component-theme($main-app-theme);
 }
 
 h1,

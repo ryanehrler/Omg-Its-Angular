@@ -6,15 +6,21 @@
 $main-app-theme: mat-dark-theme($app-primary, $app-accent, $app-warn);
 @include angular-material-theme($main-app-theme);
 
-@mixin header-theme($theme) {
+// Do this..
+// https://stackoverflow.com/questions/49642098/angular-material-global-color-variables
+@mixin component-theme($theme) {
   $primary: map-get($theme, primary);
   $accent: map-get($theme, accent);
   $warn: map-get($theme, accent);
   $foreground: map-get($theme, foreground);
   $background: map-get($theme, background);
 
-  header-area {
+  .header-area {
     color: mat-color($foreground, text);
     background-color: mat-color($background, app-bar);
+  }
+
+  .grid-container {
+    background-color: mat-color($background, background);
   }
 }
