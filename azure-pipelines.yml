@@ -17,3 +17,15 @@ steps:
       npm install
       ng build --prod
     displayName: 'npm install and build'
+
+  - task: CopyFiles@2
+    inputs:
+      SourceFolder: '$(System.DefaultWorkingDirectory)'
+      Contents: |
+        dist/angular-guide/**
+        deploy.ps1
+        firebase.json
+        package.json
+      TargetFolder: '$(Build.ArtifactStagingDirectory)'
+
+  - task: PublishBuildArtifacts@1
