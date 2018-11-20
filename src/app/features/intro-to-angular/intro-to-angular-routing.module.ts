@@ -19,8 +19,8 @@ const routes: Routes = [
   { path: 'angular-modules', component: AngularModulesComponent },
   { path: 'why-core', component: WhyCoreModuleComponent },
   { path: 'why-shared', component: WhySharedModuleComponent },
-  { path: '', redirectTo: 'intro', pathMatch: 'full' },
-  { path: '**', redirectTo: 'intro', pathMatch: 'full' }
+  { path: '', redirectTo: 'setting-up-environment', pathMatch: 'full' },
+  { path: '**', redirectTo: 'setting-up-environment', pathMatch: 'full' }
 ];
 
 @NgModule({

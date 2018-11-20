@@ -1,95 +1,86 @@
 <h1>@Injector({{ '{' }}providedIn: 'root'{{ '}' }})</h1>
 <p>
-  Huh? Why? When I first heard of the new providedIn attribute I had mixed
-  feeling. To me the providers array makes perfect sense once I fully understood
-  how DI works in Angular. When I first started I was thoroughly confused of
-  course, but does providedIn make that clearer? Maybe. I hope so because it is
-  now the default behavior for the CLI
+    Huh? Why? When I first heard of the new providedIn attribute I had mixed
+    feeling. To me the providers array makes perfect sense once I fully understood
+    how DI works in Angular. When I first started I was thoroughly confused of
+    course, but does providedIn make that clearer? Maybe. I hope so because it is
+    now the default behavior for the CLI
 </p>
 <h1>So why the new attribute?</h1>
 <p>
-  One reason: <b>Tree Shaking.</b> The Angular team is obssessed with tree
-  shaking at the moment (for good reason). What is tree shaking, you might ask?
-  The simple explanation is: Tree shaking allows your application to deliver
-  only the code which is absolutely needed. Tree shaking applies to more than
-  just services but just as an example - if you have 200 singleton services but
-  the user is on the home page and only needs 10 of those services, then a
-  <i>tree shook</i>? application will only deliver those 10 services and will
-  load the other 180 as they are needed.
+    One reason: <b>Tree Shaking.</b> The Angular team is obssessed with tree
+    shaking at the moment (for good reason). What is tree shaking, you might ask?
+    The simple explanation is: Tree shaking allows angular to remove code you aren't using.
+    This seems trivial within your own application, because why would you keep dead code around?
+    But what happens when you are using a 3rd party library and only using one part of it?
+    You don't want to carry around the entire library. Right now we are talking about services,
+    but tree shaking applies to every part of our application.
+</p>
+<p>
+    For a little while I confused tree shaking with lazy loading. To me it was confusing at first
+    because the new ProvidedIn also allows us to lazy load our singleton services now. More on that
+    down below. So just remember tree shaking removes unused (or dead) code, while lazy loading
+    delivers only the code you need for the part of the site you are on.
 </p>
 <h1>How does providedIn help?</h1>
 <p>
-  It does this by enabling a service to be self contained. Examples are our
-  friend so lets see the "old way" first. Below you can see we have a service
-  called MyService and we are providing it in our Core Module, which is the
-  normal way of providing a singleton service for our entire application.
+    It helps by enabling a service to be self contained. Examples are our
+    friend so lets see the "old way" first. Below you can see we have a service
+    called MyService and we are providing it in our Core Module, which is the
+    normal way of providing a singleton service for our entire application.
 </p>
-<app-frameless-image
-  [src]="imageService.images.service_topics.providedIn.providers_array"
-></app-frameless-image>
+<app-frameless-image [src]="'../../../../assets/services/providedIn__providers_array.jpg'"></app-frameless-image>
 <p>
-  The import statement is what tells our application "Hey I need this service"
-  and in return that referenced code will be bundled wherever the import
-  statement is located. Since this import statement is in our Core module the
-  service will be bundled with our initial application load. As you can see
-  below, our <b>my.service.ts</b> is coming along in the main.js bundle.
+    The import statement is what tells our application "Hey I need this service"
+    and in return that referenced code will be bundled wherever the import
+    statement is located. Since this import statement is in our Core module the
+    service will be bundled with our initial application load. As you can see
+    below, our <b>my.service.ts</b> is coming along in the main.js bundle.
 </p>
-<app-frameless-image
-  [src]="
-    imageService.images.service_topics.providedIn.network_tab_providers_array
-  "
-></app-frameless-image>
+<app-frameless-image [src]="'../../../../assets/services/providedIn__network_tab_providers_array.jpg'"></app-frameless-image>
 <p>
-  You may be saying to yourself right now, "Who cares? Aren't we only saving a
-  few KB?". Yes, and frankly most applications don't really need to care about
-  this. Most services aren't very large in size and thus you aren't saving much
-  by having the service load later. Much of the benefit will be with 3rd party
-  libraries. Similar to our example above, let us pretend you are using Angular
-  Material and you only use a few components. Angular Material may have 30
-  "root" services, but you only need the ones which pertain to your components.
-  Now only those 2 services you are using will be bundled with your application
-  and the other 28 won't be, without the new providedIn attribute this wouldn't
-  be possible. Fun right?
+    You may be saying to yourself right now, "Who cares? Aren't we only saving a
+    few KB?". Yes, and frankly most applications don't really need to care about
+    this. Most services aren't very large in size and thus you aren't saving much
+    by having the service load later. Much of the benefit will be with 3rd party
+    libraries. Similar to our example above, let us pretend you are using Angular
+    Material and you only use a few components. Angular Material may have 30
+    "root" services, but you only need the ones which pertain to your components.
+    Now only those 2 services you are using will be bundled with your application
+    and the other 28 won't be, without the new providedIn attribute this wouldn't
+    be possible. Fun right?
 </p>
-<app-framed-image
-  [src]="imageService.images.service_topics.providedIn.lazy_route"
->
-  <div><b>Side Note:</b></div>
-  A {{ ':bulb:' | emojify }} should be going off right about now if you ever
-  wondered why a lazy loaded module needs to be setup as a string in your
-  router.module and not as a hard reference with an import statement. If we used
-  a hard reference then the lazy Module would be bundled in our main.js and
-  wouldn't be lazy!
+<app-framed-image [src]="'../../../../assets/services/providedIn__lazy_route.jpg'">
+    <div><b>Side Note:</b></div>
+    A {{ ':bulb:' | emojify }} should be going off right about now if you ever
+    wondered why a lazy loaded module needs to be setup as a string in your
+    router.module and not as a hard reference with an import statement. If we used
+    a hard reference then the lazy Module would be bundled in our main.js and
+    wouldn't be lazy!
 </app-framed-image>
 <p>
-  Now let's take a look at the new providedIn and examine the network tab again.
-  The providedIn attribute located in the @Injectable decorator tells angular
-  where to inject the service when it is referenced.
+    Now let's take a look at the new providedIn and examine the network tab again.
+    The providedIn attribute located in the @Injectable decorator tells angular
+    where to inject the service when it is referenced.
 </p>
-<app-frameless-image
-  [src]="imageService.images.service_topics.providedIn.providedIn_service"
-></app-frameless-image>
+<app-frameless-image [src]="'../../../../assets/services/providedIn__new_property.jpg'"></app-frameless-image>
 <p>
-  If you check the main.js in the network tab you will no longer find the
-  my.service.ts anymore, because the service isn't referenced anywhere in our
-  application. What happens if the service is referenced in a lazy loaded
-  module?
+    If you check the main.js in the network tab you will no longer find the
+    my.service.ts anymore, because the service isn't referenced anywhere in our
+    application. BOOM, tree shook! What happens if the service is referenced in a lazy loaded
+    module?
 </p>
-<app-frameless-image
-  [src]="imageService.images.service_topics.providedIn.lazy_component"
-></app-frameless-image>
+<app-frameless-image [src]="'../../../../assets/services/providedIn__lazy_component.jpg'"></app-frameless-image>
 <p>
-  If you said the service will come down in the lazy module's bundle you would
-  be correct.
+    If you said the service will come down in the lazy module's bundle you would
+    be correct.
 </p>
-<app-frameless-image
-  [src]="imageService.images.service_topics.providedIn.lazy_module_network_tab"
-></app-frameless-image>
+<app-frameless-image [src]="'../../../../assets/services/providedIn__lazy_module_network_tab.jpg'"></app-frameless-image>
 <p>
-  As you can see this allows us to provide a singleton service app wide in a
-  lazy way. This is something that was not possible before providedIn since the
-  providers[ ] forced us to create a hard reference in either our core or app
-  module.
+    As you can see this allows us to provide a singleton service app wide in a
+    lazy way. This is something that was not possible before providedIn since the
+    providers[ ] forced us to create a hard reference in either our core or app
+    module.
 </p>
 <h1>Module Only Services</h1>
 <p>... need content</p>
@@ -97,7 +88,7 @@
 <p>... need content</p>
 <h1>How does this work with Barrels?</h1>
 <p>
-  It doesn't. You can still technically group your services together in a
-  barrel; however, as soon as that barrel is used in your application then all
-  referenced files located in the barrel will be sent.
+    It doesn't. You can still technically group your services together in a
+    barrel; however, as soon as that barrel is used in your application then all
+    referenced files located in the barrel will be sent.
 </p>
