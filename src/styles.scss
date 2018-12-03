@@ -2,22 +2,22 @@
 @import './app/angular-material/theme.scss';
 
 body {
-  margin: 0;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 18px;
-  line-height: 28px;
-  color: white;
-
-  [class*='mat'] {
+    margin: 0;
     font-family: 'Open Sans', sans-serif;
-  }
+    font-size: 18px;
+    line-height: 28px;
+    color: white;
 
-  @include component-theme($main-app-theme);
+    [class*='mat'] {
+        font-family: 'Open Sans', sans-serif;
+    }
+
+    @include component-theme($main-app-theme);
 }
 
 h1,
 h2,
 h3,
 h4 {
-  font-weight: normal;
+    font-weight: normal;
 }
