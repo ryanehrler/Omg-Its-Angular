@@ -1,4 +1,8 @@
+@import '../../../angular-material/variables.scss';
+
 .mat-button {
     padding: 0;
     line-height: normal;
+
+    font-size: $body-font-size;
 }

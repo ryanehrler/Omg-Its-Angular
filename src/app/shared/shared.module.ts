@@ -4,7 +4,9 @@ import { EmojifyModule } from 'angular-emojify';
 import { ExternalLinkComponent } from './components/external-link/external-link.component';
 import { FramedImageComponent } from './components/framed-image/framed-image.component';
 import { FramelessImageComponent } from './components/frameless-image/frameless-image.component';
+import { KeyComponent } from './components/key/key.component';
 import { NgModule } from '@angular/core';
+import { ProTipComponent } from './components/pro-tip/pro-tip.component';
 
 @NgModule({
   imports: [CommonModule, EmojifyModule, AngularMaterialModule],
@@ -12,12 +14,16 @@ import { NgModule } from '@angular/core';
     EmojifyModule,
     FramelessImageComponent,
     FramedImageComponent,
-    ExternalLinkComponent
+    ExternalLinkComponent,
+    ProTipComponent,
+    KeyComponent
   ],
   declarations: [
     FramelessImageComponent,
     FramedImageComponent,
-    ExternalLinkComponent
+    ExternalLinkComponent,
+    ProTipComponent,
+    KeyComponent
   ]
 })
 export class SharedModule {}

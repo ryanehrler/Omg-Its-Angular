@@ -45,6 +45,11 @@ $grid-footer-height: 6.25em;
     .content-area {
         grid-area: content;
         justify-items: center;
+
+        // &>h1:not(:first-child) {
+        h1 {
+            margin-top: 100px;
+        }
     }
 }
 

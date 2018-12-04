@@ -1,0 +1,7 @@
+<span class="key" *ngIf="!keys">
+    <ng-content></ng-content>
+</span>
+<ng-container *ngFor="let key of keys; let i = index">
+    <span class="key">{{key}}</span>
+    <span *ngIf="i !== keys.length - 1" class="plus">+</span>
+</ng-container>

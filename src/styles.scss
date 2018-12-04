@@ -1,10 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
 @import './app/angular-material/theme.scss';
+@import './app/angular-material/variables.scss';
 
 body {
     margin: 0;
     font-family: 'Open Sans', sans-serif;
-    font-size: 18px;
+    font-size: $body-font-size;
     line-height: 28px;
     color: white;
 
