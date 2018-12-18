@@ -19,6 +19,14 @@ export class SideNavComponent implements OnInit {
           path: '/intro/setting-up-environment'
         },
         {
+          title: 'Setting up VSCode',
+          path: '/intro/setting-up-vscode'
+        },
+        {
+          title: 'Creating New Project',
+          path: '/intro/creating-new-project'
+        },
+        {
           title: 'Angular building blocks',
           path: '/intro/angular-building-blocks'
         },

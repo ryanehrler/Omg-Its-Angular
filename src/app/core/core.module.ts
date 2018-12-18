@@ -14,7 +14,7 @@ import { SideNavComponent } from './components/side-nav/side-nav.component';
 
 const syntaxHighlighterConfig: HighlightJsConfig = {
   style: SyntaxStyle.GOOGLECODE,
-  languages: [Language.TYPESCRIPT, Language.SCSS, Language.HTMLBARS]
+  languages: [Language.TYPESCRIPT, Language.SCSS, Language.HTMLBARS, Language.BASH]
 };
 @NgModule({
   imports: [

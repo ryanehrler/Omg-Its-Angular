@@ -10,6 +10,8 @@ import { SettingUpEnvironmentComponent } from './setting-up-environment/setting-
 import { SharedModule } from 'src/app/shared/shared.module';
 import { WhyCoreModuleComponent } from './why-core-module/why-core-module.component';
 import { WhySharedModuleComponent } from './why-shared-module/why-shared-module.component';
+import { SettingUpVscodeComponent } from './setting-up-vscode/setting-up-vscode.component';
+import { CreatingNewProjectComponent } from './creating-new-project/creating-new-project.component';
 
 @NgModule({
   imports: [
@@ -25,7 +27,9 @@ import { WhySharedModuleComponent } from './why-shared-module/why-shared-module.
     WhyCoreModuleComponent,
     WhySharedModuleComponent,
     AngularModulesComponent,
-    IntroComponent
+    IntroComponent,
+    SettingUpVscodeComponent,
+    CreatingNewProjectComponent
   ]
 })
 export class IntroToAngularModule {}

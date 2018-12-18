@@ -14,11 +14,28 @@ body {
     }
 
     @include component-theme($main-app-theme);
+
+    .italicize {
+        font-style: italic;
+    }
+
+    p+h1,
+    p+h2,
+    p+h3,
+    p+h4 {
+        padding-top: 20px;
+    }
+
+    .larger-than-normal {
+        font-size: $body-font-size-larger;
+    }
 }
 
 h1,
 h2,
 h3,
 h4 {
+    opacity: 0.8;
+    color: $primary;
     font-weight: normal;
 }

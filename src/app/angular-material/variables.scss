@@ -5,10 +5,12 @@ $app-accent: mat-palette($mat-grey, 900, 600, 800);
 $app-warn: mat-palette($mat-red);
 
 $primary: mat-color($app-primary);
+$link-color: #00F3FF;
 
 $accent: mat-color($app-accent);
 $accent-800: mat-color($app-accent, 800);
 
 $warn: mat-color($app-warn);
 
-$body-font-size: 18px;
+$body-font-size: 16px;
+$body-font-size-larger: $body-font-size+4px;

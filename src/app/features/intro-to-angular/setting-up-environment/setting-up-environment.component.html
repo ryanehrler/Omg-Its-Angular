@@ -13,14 +13,14 @@
     <app-external-link [href]="'https://angular.io/resources'" [text]="'Moar IDEs!!'"></app-external-link>
     -- More IDEs from Angular.io resource page
 </p>
-<h3>
+<p class="italicize larger-than-normal">
     If it wasn't obvious already - I will be using VSCode, so I can't promise there won't be any screenshots and
     how-to's which are specific to VSCode throughout this site. However it shouldn't be vital.
-</h3>
+</p>
 <h1>Install NodeJS</h1>
 <p>
-    Install LTS (Long Term Support) version
-    <app-external-link [href]="'https://nodejs.org/en/'" [text]="'here.'"></app-external-link>
+    Install LTS (<i>Long Term Support</i>) version
+    <app-external-link [href]="'https://nodejs.org/en/'">here.</app-external-link>
     NPM comes along for the ride when you install NodeJs.
 </p>
 
@@ -29,9 +29,15 @@
 <app-pro-tip>
     Press <app-key [keys]="['Ctrl', '~']"></app-key> to bring up terminal in VSCode
 </app-pro-tip>
-
-<div style="margin-top: 20px;"></div>
+<p>
+    Now run this code in your terminal. The --global just tells npm to install the package at a global
+    level instead of a project level. When we generate our angular application you will see the @angular/cli
+    is also installed at the project level but don't confuse the two. More on that later.
+    <ngx-syntax-highlighter [code]="'npm install @angular/cli --global'"></ngx-syntax-highlighter>
+    For more information on <app-external-link href="https://docs.npmjs.com/cli/install.html">npm install command</app-external-link>
+</p>
 <app-framed-image [src]="'../../../../assets/getting_started/intro__setting_up_environment__cli_nodejs_version.jpg'">
     If you are curious what version of Node the Angular CLI requires then checkout
-    the <b>Prerequisites</b> section on the npmjs @angular/cli page.
+    the <b>Prerequisites</b> section on the
+    <app-external-link href="https://www.npmjs.com/package/@angular/cli">npmjs @angular/cli page</app-external-link>.
 </app-framed-image>

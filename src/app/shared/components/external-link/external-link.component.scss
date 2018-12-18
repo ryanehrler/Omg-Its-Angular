@@ -3,6 +3,7 @@
 .mat-button {
     padding: 0;
     line-height: normal;
-
+    color: $link-color;
+    text-decoration: underline;
     font-size: $body-font-size;
 }
