@@ -6,6 +6,7 @@ import { FramedImageComponent } from './components/framed-image/framed-image.com
 import { FramelessImageComponent } from './components/frameless-image/frameless-image.component';
 import { KeyComponent } from './components/key/key.component';
 import { NgModule } from '@angular/core';
+import { NgxHighlightJsModule } from 'ngx-syntax-highlighter';
 import { ProTipComponent } from './components/pro-tip/pro-tip.component';
 
 @NgModule({
@@ -16,7 +17,8 @@ import { ProTipComponent } from './components/pro-tip/pro-tip.component';
     FramedImageComponent,
     ExternalLinkComponent,
     ProTipComponent,
-    KeyComponent
+    KeyComponent,
+    NgxHighlightJsModule
   ],
   declarations: [
     FramelessImageComponent,
