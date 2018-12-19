@@ -33,7 +33,7 @@
     Now run this code in your terminal. The --global just tells npm to install the package at a global
     level instead of a project level. When we generate our angular application you will see the @angular/cli
     is also installed at the project level but don't confuse the two. More on that later.
-    <ngx-syntax-highlighter [code]="'npm install @angular/cli --global'"></ngx-syntax-highlighter>
+    <ngx-syntax-highlighter [code]="'npm install @angular/cli --global'" [language]="languages.BASH" [forceLanguage]="true"></ngx-syntax-highlighter>
     For more information on <app-external-link href="https://docs.npmjs.com/cli/install.html">npm install command</app-external-link>
 </p>
 <app-framed-image [src]="'../../../../assets/getting_started/intro__setting_up_environment__cli_nodejs_version.jpg'">

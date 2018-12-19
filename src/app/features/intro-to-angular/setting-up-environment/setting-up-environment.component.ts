@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Language } from 'ngx-syntax-highlighter';
 
 @Component({
   selector: 'app-setting-up-environment',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./setting-up-environment.component.scss']
 })
 export class SettingUpEnvironmentComponent implements OnInit {
+  languages = Language;
   constructor() {}
 
   ngOnInit() {}
