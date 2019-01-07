@@ -6,8 +6,9 @@ import {
   MatFormFieldModule,
   MatIconModule,
   MatInputModule,
+  MatProgressSpinnerModule,
   MatToolbarModule
-} from '@angular/material';
+  } from '@angular/material';
 import { NgModule } from '@angular/core';
 
 @NgModule({
@@ -19,7 +20,8 @@ import { NgModule } from '@angular/core';
     MatIconModule,
     MatFormFieldModule,
     MatExpansionModule,
-    MatCardModule
+    MatCardModule,
+    MatProgressSpinnerModule
   ],
   declarations: []
 })

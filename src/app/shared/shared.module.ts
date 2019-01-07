@@ -5,12 +5,18 @@ import { ExternalLinkComponent } from './components/external-link/external-link.
 import { FramedImageComponent } from './components/framed-image/framed-image.component';
 import { FramelessImageComponent } from './components/frameless-image/frameless-image.component';
 import { KeyComponent } from './components/key/key.component';
+import { LazyLoadImageModule } from 'ng-lazyload-image';
 import { NgModule } from '@angular/core';
 import { NgxHighlightJsModule } from 'ngx-syntax-highlighter';
 import { ProTipComponent } from './components/pro-tip/pro-tip.component';
 
 @NgModule({
-  imports: [CommonModule, EmojifyModule, AngularMaterialModule],
+  imports: [
+    CommonModule,
+    EmojifyModule,
+    AngularMaterialModule,
+    LazyLoadImageModule
+  ],
   exports: [
     EmojifyModule,
     FramelessImageComponent,

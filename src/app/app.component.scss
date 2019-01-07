@@ -9,7 +9,7 @@ $grid-footer-height: 6.25em;
     width: 100vw;
     min-height: 100vh;
 
-    grid-template-columns: minmax(10em, 20em) 1fr 1fr 1fr;
+    grid-template-columns: minmax(10em, 20em) 2fr 2fr 1fr;
     grid-template-rows: $grid-header-height auto $grid-footer-height;
     grid-template-areas:
         'header header header header'

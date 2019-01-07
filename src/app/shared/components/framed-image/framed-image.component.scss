@@ -1,8 +1,8 @@
 .framed-container {
     display: flex;
-    align-items: center;
+    justify-content: center;
 
-    .mat-card-image {
-        // max-width: 100%;
+    .mat-card {
+        transition: max-width 1s;
     }
 }
