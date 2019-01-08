@@ -8,9 +8,8 @@ describe('ProTipComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ProTipComponent ]
-    })
-    .compileComponents();
+      declarations: [ProTipComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {

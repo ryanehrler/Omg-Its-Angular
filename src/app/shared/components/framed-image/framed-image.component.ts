@@ -5,7 +5,7 @@ import {
   Input,
   OnInit,
   ViewChild
-  } from '@angular/core';
+} from '@angular/core';
 
 @Component({
   selector: 'app-framed-image',

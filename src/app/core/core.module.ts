@@ -6,7 +6,7 @@ import {
   Language,
   NgxHighlightJsModule,
   SyntaxStyle
-  } from 'ngx-syntax-highlighter';
+} from 'ngx-syntax-highlighter';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { SharedModule } from '../shared/shared.module';
@@ -14,7 +14,12 @@ import { SideNavComponent } from './components/side-nav/side-nav.component';
 
 const syntaxHighlighterConfig: HighlightJsConfig = {
   style: SyntaxStyle.GOOGLECODE,
-  languages: [Language.TYPESCRIPT, Language.SCSS, Language.HTMLBARS, Language.BASH]
+  languages: [
+    Language.TYPESCRIPT,
+    Language.SCSS,
+    Language.HTMLBARS,
+    Language.BASH
+  ]
 };
 @NgModule({
   imports: [

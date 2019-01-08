@@ -8,9 +8,8 @@ describe('FramelessImageComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ FramelessImageComponent ]
-    })
-    .compileComponents();
+      declarations: [FramelessImageComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {

@@ -8,9 +8,8 @@ describe('FramedImageComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ FramedImageComponent ]
-    })
-    .compileComponents();
+      declarations: [FramedImageComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {

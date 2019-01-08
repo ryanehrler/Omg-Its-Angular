@@ -8,9 +8,8 @@ describe('SettingUpVscodeComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SettingUpVscodeComponent ]
-    })
-    .compileComponents();
+      declarations: [SettingUpVscodeComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {
