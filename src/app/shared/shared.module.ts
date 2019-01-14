@@ -9,6 +9,7 @@ import { LazyLoadImageModule } from 'ng-lazyload-image';
 import { NgModule } from '@angular/core';
 import { NgxHighlightJsModule } from 'ngx-syntax-highlighter';
 import { ProTipComponent } from './components/pro-tip/pro-tip.component';
+import { BodyContentComponent } from './components/body-content/body-content.component';
 
 @NgModule({
   imports: [
@@ -19,19 +20,21 @@ import { ProTipComponent } from './components/pro-tip/pro-tip.component';
   ],
   exports: [
     EmojifyModule,
+    NgxHighlightJsModule,
     FramelessImageComponent,
     FramedImageComponent,
     ExternalLinkComponent,
     ProTipComponent,
     KeyComponent,
-    NgxHighlightJsModule
+    BodyContentComponent
   ],
   declarations: [
     FramelessImageComponent,
     FramedImageComponent,
     ExternalLinkComponent,
     ProTipComponent,
-    KeyComponent
+    KeyComponent,
+    BodyContentComponent
   ]
 })
 export class SharedModule {}
