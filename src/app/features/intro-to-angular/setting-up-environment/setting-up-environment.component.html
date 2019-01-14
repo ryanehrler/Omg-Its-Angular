@@ -1,43 +1,50 @@
 <h1>Install VSCode</h1>
-<p>
-    ... Do I have to? Yes, you do. It's awesome. You can thank me later {{ ':smile:' | emojify }}
-    <app-external-link [href]="'https://code.visualstudio.com/'" [text]="'VSCode Download'"></app-external-link>
-</p>
-<p>
-    Okay fine
-    <app-external-link [href]="'https://www.jetbrains.com/webstorm'" [text]="'IntelliJ Webstorm'"></app-external-link>
-    is awesome too, just not sure it's worth paying for when VSCode is free. I used and loved Webstorm for 2 years but
-    switched when VSCode was released.
-</p>
-<p>
-    <app-external-link [href]="'https://angular.io/resources'" [text]="'Moar IDEs!!'"></app-external-link>
-    -- More IDEs from Angular.io resource page
-</p>
-<p class="italicize larger-than-normal">
-    If it wasn't obvious already - I will be using VSCode, so I can't promise there won't be any screenshots and
-    how-to's which are specific to VSCode throughout this site. However it shouldn't be vital.
-</p>
+<div class="body-content">
+    <p>
+        ... Do I have to? Yes, you do. It's awesome. You can thank me later {{ ':smile:' | emojify }}
+        <app-external-link [href]="'https://code.visualstudio.com/'" [text]="'VSCode Download'"></app-external-link>
+    </p>
+    <p>
+        Okay fine
+        <app-external-link [href]="'https://www.jetbrains.com/webstorm'" [text]="'IntelliJ Webstorm'"></app-external-link>
+        is awesome too, just not sure it's worth paying for when VSCode is free. I used and loved Webstorm for 2 years
+        but
+        switched when VSCode was released.
+    </p>
+    <p>
+        <app-external-link [href]="'https://angular.io/resources'" [text]="'Moar IDEs!!'"></app-external-link>
+        -- More IDEs from Angular.io resource page
+    </p>
+    <p class="italicize larger-than-normal">
+        If it wasn't obvious already - I will be using VSCode, so I can't promise there won't be any screenshots and
+        how-to's which are specific to VSCode throughout this site. However it shouldn't be vital.
+    </p>
+</div>
 <h1>Install NodeJS</h1>
-<p>
-    Install LTS (<i>Long Term Support</i>) version
-    <app-external-link [href]="'https://nodejs.org/en/'">here.</app-external-link>
-    NPM comes along for the ride when you install NodeJs.
-</p>
-
+<div class="body-content">
+    <p>
+        Install LTS (<i>Long Term Support</i>) version
+        <app-external-link [href]="'https://nodejs.org/en/'">here.</app-external-link>
+        NPM comes along for the ride when you install NodeJs.
+    </p>
+</div>
 <h1>Install Angular CLI</h1>
-<p>Open a command prompt or VSCode.</p>
-<app-pro-tip>
-    Press <app-key [keys]="['Ctrl', '~']"></app-key> to bring up terminal in VSCode
-</app-pro-tip>
-<p>
-    Now run this code in your terminal. The --global just tells npm to install the package at a global
-    level instead of a project level. When we generate our angular application you will see the @angular/cli
-    is also installed at the project level but don't confuse the two. More on that later.
-    <ngx-syntax-highlighter [code]="'npm install @angular/cli --global'" [language]="languages.BASH" [forceLanguage]="true"></ngx-syntax-highlighter>
-    For more information on <app-external-link href="https://docs.npmjs.com/cli/install.html">npm install command</app-external-link>
-</p>
-<app-framed-image [src]="'../../../../assets/getting_started/intro__setting_up_environment__cli_nodejs_version.jpg'">
-    If you are curious what version of Node the Angular CLI requires then checkout
-    the <b>Prerequisites</b> section on the
-    <app-external-link href="https://www.npmjs.com/package/@angular/cli">npmjs @angular/cli page</app-external-link>.
-</app-framed-image>
+<div class="body-content">
+    <p>Open a command prompt or VSCode.</p>
+    <app-pro-tip>
+        Press <app-key [keys]="['Ctrl', '~']"></app-key> to bring up terminal in VSCode
+    </app-pro-tip>
+    <p>
+        Now run this code in your terminal. The --global just tells npm to install the package at a global
+        level instead of a project level. When we generate our angular application you will see the @angular/cli
+        is also installed at the project level but don't confuse the two. More on that later.
+        <ngx-syntax-highlighter [code]="'npm install @angular/cli --global'" [language]="languages.BASH"
+            [forceLanguage]="true"></ngx-syntax-highlighter>
+        For more information on <app-external-link href="https://docs.npmjs.com/cli/install.html">npm install command</app-external-link>
+    </p>
+    <app-framed-image [src]="'../../../../assets/getting_started/intro__setting_up_environment__cli_nodejs_version.jpg'">
+        If you are curious what version of Node the Angular CLI requires then checkout
+        the <b>Prerequisites</b> section on the
+        <app-external-link href="https://www.npmjs.com/package/@angular/cli">npmjs @angular/cli page</app-external-link>.
+    </app-framed-image>
+</div>
