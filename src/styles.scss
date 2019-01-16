@@ -3,43 +3,43 @@
 @import './app/angular-material/variables.scss';
 
 body {
-    margin: 0;
-    font-family: 'Open Sans', sans-serif;
-    font-size: $body-font-size;
-    line-height: 28px;
-    color: white;
+	margin: 0;
+	font-family: 'Open Sans', sans-serif;
+	font-size: $body-font-size;
+	line-height: 28px;
+	color: white;
 
-    [class*='mat'] {
-        font-family: 'Open Sans', sans-serif;
-    }
+	[class*='mat'] {
+		font-family: 'Open Sans', sans-serif;
+	}
 
-    @include component-theme($main-app-theme);
+	@include component-theme($main-app-theme);
 
-    .italicize {
-        font-style: italic;
-    }
+	.italicize {
+		font-style: italic;
+	}
 
-    p+h1,
-    p+h2,
-    p+h3,
-    p+h4 {
-        padding-top: 20px;
-    }
+	p+h1,
+	p+h2,
+	p+h3,
+	p+h4 {
+		padding-top: 20px;
+	}
 
-    .larger-than-normal {
-        font-size: $body-font-size-larger;
-    }
+	.larger-than-normal {
+		font-size: $body-font-size-larger;
+	}
 }
 
 h1,
 h2,
 h3,
 h4 {
-    opacity: 0.8;
-    color: $primary;
-    font-weight: normal;
+	opacity: 0.8;
+	color: $primary;
+	font-weight: normal;
 }
 
 .body-content {
-    margin-left: 20px;
+	margin-left: 20px;
 }

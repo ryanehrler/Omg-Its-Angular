@@ -24,6 +24,7 @@ export class CreatingNewProjectComponent implements OnInit {
   > ng generate module core
     # Generate Shared module
   > ng generate module shared`;
+
   constructor() {}
 
   ngOnInit() {}

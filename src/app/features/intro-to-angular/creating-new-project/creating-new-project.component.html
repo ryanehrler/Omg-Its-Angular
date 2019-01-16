@@ -1,109 +1,132 @@
 <h1>Readme</h1>
 <app-body-content>
-    <p>
-        When working through this page we are going to generate a bunch of files using the Angular Command Line
-        Interface otherwise known as the Angular CLI. If you feel completely lost while working through this
-        then congratulations you are a normal human being. Push through and it will be worth it in the end. Some
-        of the files we will generate now will be explained later. I'll give a brief description here, but most
-        parts deserve a longer explanations.
-    </p>
+	<p>
+		When working through this page we are going to generate a bunch of files
+		using the Angular Command Line Interface otherwise known as the Angular CLI.
+		If you feel completely lost while working through this then congratulations
+		you are a normal human being. Push through and it will be worth it in the
+		end. Some of the files we will generate now will be explained later. I'll
+		give a brief description here, but most parts deserve a longer explanations.
+	</p>
 </app-body-content>
 
 <h1>Starting your first project</h1>
 <app-body-content>
-    <app-pro-tip>
-        When you complete the below steps check out the <app-external-link [href]="'https://angular.io/cli'">CLI
-            documentation</app-external-link>. Start with the documentation for <b>generate</b>. Even if you are lost
-        the most important thing is to begin the process of familiarizing yourself with it. So if you do have a problem
-        or forget the syntax you can go to the source.
-    </app-pro-tip>
-    <app-pro-tip>
-        A lesser known page are the <app-external-link [href]="'https://github.com/angular/angular-cli/wiki/stories'">Stories</app-external-link>
-        located within the angular-cli github repo. Take a look at the titles and make a mental note of what is located
-        here. Most likely you will find one or more of these useful in the future.
-    </app-pro-tip>
-    <p>
-        First things first. Let's generate our project! For your reference -
-        <app-external-link href="https://angular.io/cli/new">ng new documentation</app-external-link>
-    </p>
-    <ul>
-        <li>Open VSCode</li>
-        <li>Open terminal (<app-key [keys]="['Ctrl', '~']"></app-key>)</li>
-    </ul>
-    <ngx-syntax-highlighter [code]="generateProject" [language]="languages.BASH" [forceLanguage]="true"></ngx-syntax-highlighter>
-    <p>Let's break it down.</p>
-    <ul>
-        <li><b>cd c:\git</b></li>
-        <ul>
-            <li>cd = change directory. This is a windows command. If you are on a Mac or Linux you can google
-                "How to change directory from command line on Mac".
-            </li>
-        </ul>
-        <app-frameless-image [src]="'../../../../assets/creating-project/generate_project.png'"></app-frameless-image>
-        <li><b>ng new MyAwesomeProject --routing=true --style=scss</b></li>
-        <ul>
-            <li><i>ng new MyAwesomeProject</i></li>
-            <ul>
-                <li>Creates a new project called MyAwesomeProject.</li>
-            </ul>
-            <li><i>--routing=true</i></li>
-            <ul>
-                <li>Tells the Angular CLI to generate the appropriate files for routing/navigation. We will review
-                    routing in more detail later.</li>
-            </ul>
-            <li><i>--style=scss</i></li>
-            <ul>
-                <li>
-                    Tells the Angular CLI to use <app-external-link href="https://sass-lang.com/">Sass</app-external-link>
-                    instead of the default css. Don't worry if you don't know what Sass is, you can type css directly
-                    into the .scss files. The reason I like to use Sass instead of sticking with the default is because
-                    adding scss later is somewhat of a pain and even if you don't use any Sass features it doesn't hurt
-                    to have it.
-                </li>
-            </ul>
-        </ul>
-    </ul>
+	<app-pro-tip>
+		When you complete the below steps check out the
+		<app-external-link [href]="'https://angular.io/cli'">CLI documentation</app-external-link>. Start with the
+		documentation for <b>generate</b>. Even if you are lost
+		the most important thing is to begin the process of familiarizing yourself
+		with it. So if you do have a problem or forget the syntax you can go to the
+		source.
+	</app-pro-tip>
+	<app-pro-tip>
+		A lesser known page are the
+		<app-external-link [href]="'https://github.com/angular/angular-cli/wiki/stories'">Stories</app-external-link>
+		located within the angular-cli github repo. Take a look at the titles and
+		make a mental note of what is located here. Most likely you will find one or
+		more of these useful in the future.
+	</app-pro-tip>
+	<p>
+		First things first. Let's generate our project! For your reference -
+		<app-external-link href="https://angular.io/cli/new">ng new documentation</app-external-link>
+	</p>
+	<ul>
+		<li>Open VSCode</li>
+		<li>Open terminal (<app-key [keys]="['Ctrl', '~']"></app-key>)</li>
+	</ul>
+	<ngx-syntax-highlighter [code]="generateProject" [language]="languages.BASH" [forceLanguage]="true"></ngx-syntax-highlighter>
+	<p>Let's break it down.</p>
+	<ul>
+		<li><b>cd c:\git</b></li>
+		<ul>
+			<li>
+				cd = change directory. This is a windows command. If you are on a Mac or
+				Linux you can google "How to change directory from command line on Mac".
+			</li>
+		</ul>
+		<app-frameless-image [src]="'../../../../assets/creating-project/generate_project.png'"></app-frameless-image>
+		<li><b>ng new MyAwesomeProject --routing=true --style=scss</b></li>
+		<ul>
+			<li><i>ng new MyAwesomeProject</i></li>
+			<ul>
+				<li>Creates a new project called MyAwesomeProject.</li>
+			</ul>
+			<li><i>--routing=true</i></li>
+			<ul>
+				<li>
+					Tells the Angular CLI to generate the appropriate files for
+					routing/navigation. We will review routing in more detail later.
+				</li>
+			</ul>
+			<li><i>--style=scss</i></li>
+			<ul>
+				<li>
+					Tells the Angular CLI to use
+					<app-external-link href="https://sass-lang.com/">Sass</app-external-link>
+					instead of the default css. Don't worry if you don't know what Sass
+					is, you can type css directly into the .scss files. The reason I like
+					to use Sass instead of sticking with the default is because adding
+					scss later is somewhat of a pain and even if you don't use any Sass
+					features it doesn't hurt to have it.
+				</li>
+			</ul>
+		</ul>
+	</ul>
 </app-body-content>
 
 <h1>Open Project in VSCode</h1>
 <app-body-content>
-    <ngx-syntax-highlighter [code]="openProject" [language]="languages.BASH" [forceLanguage]="true"></ngx-syntax-highlighter>
-    <p>{{':tada: :tada:' | emojify}} Congratulations! You have created an angular project.</p>
-    <app-frameless-image src="../../../../assets/creating-project/new_project_vscode.png"></app-frameless-image>
-    <ngx-syntax-highlighter [code]="runProject" [language]="languages.BASH" [forceLanguage]="true"></ngx-syntax-highlighter>
+	<ngx-syntax-highlighter [code]="openProject" [language]="languages.BASH" [forceLanguage]="true"></ngx-syntax-highlighter>
+	<p>
+		{{ ':tada: :tada:' | emojify }} Congratulations! You have created an angular
+		project.
+	</p>
+	<app-frameless-image src="../../../../assets/creating-project/new_project_vscode.png"></app-frameless-image>
+	<ngx-syntax-highlighter [code]="runProject" [language]="languages.BASH" [forceLanguage]="true"></ngx-syntax-highlighter>
 </app-body-content>
 
 <h1>Setup Core and Shared Modules</h1>
 <app-body-content>
-    <p>
-        In this section we are going to generate two important modules. I'll give a brief description here but both
-        modules deserve their own page with definitions and examples. When I first started learning Angular the
-        purpose and use of these modules eluded me for some time, so I hope to bring some clarity early on to you.
-        However if you leave still scratching your head then don't worry, this is normal. In time they will make
-        more and more sense.
-    </p>
-    <p>
-        At this point we haven't even defined what a Module is. So don't worry about absorbing these definitions.
-    </p>
-    <ul>
-        <li>Core Module</li>
-        <ul>
-            <li>The place we put everything we normally would put in the App Module.</li>
-            <li>Wait? Are you serious? Yes, seriously the Core module keeps the App module uncluttered. Clutter = bad.</li>
-        </ul>
-        <li>Shared Module</li>
-        <ul>
-            <li>The place we put generic stuff used accross our entire application.</li>
-        </ul>
-    </ul>
-    <ngx-syntax-highlighter [code]="generateCoreShared" [language]="languages.BASH" [forceLanguage]="true"></ngx-syntax-highlighter>
-    <app-pro-tip>
-        Using the shorthand notation for commands is much more efficient.
-        <ul>
-            <li>For example</li>
-            <ul>
-                <li>ng g m shared &nbsp;==&nbsp; ng generate module shared</li>
-            </ul>
-        </ul>
-    </app-pro-tip>
+	<p>
+		In this section we are going to generate two important modules. I'll give a
+		brief description here but both modules deserve their own page with
+		definitions and examples. When I first started learning Angular the purpose
+		and use of these modules eluded me for some time, so I hope to bring some
+		clarity early on to you. However if you leave still scratching your head
+		then don't worry, this is normal. In time they will make more and more
+		sense.
+	</p>
+	<p>
+		At this point we haven't even defined what a Module is. So don't worry about
+		absorbing these definitions.
+	</p>
+	<ul>
+		<li>Core Module</li>
+		<ul>
+			<li>
+				The place we put everything we normally would put in the App Module.
+			</li>
+			<li>
+				Wait? Are you serious? Yes, seriously the Core module keeps the App
+				module uncluttered. Clutter = bad.
+			</li>
+		</ul>
+		<li>Shared Module</li>
+		<ul>
+			<li>
+				The place we put generic stuff used accross our entire application.
+			</li>
+		</ul>
+	</ul>
+	<ngx-syntax-highlighter [code]="generateCoreShared" [language]="languages.BASH" [forceLanguage]="true"></ngx-syntax-highlighter>
+	<app-pro-tip>
+		Using the shorthand notation for commands is much more efficient.
+		<ul>
+			<li>For example</li>
+			<ul>
+				<li>ng g m shared &nbsp;==&nbsp; ng generate module shared</li>
+			</ul>
+		</ul>
+	</app-pro-tip>
 </app-body-content>

@@ -5,68 +5,68 @@ $grid-header-height: 6.25em;
 $grid-footer-height: 6.25em;
 
 .grid-container {
-    display: grid;
-    width: 100vw;
-    min-height: 100vh;
+	display: grid;
+	width: 100vw;
+	min-height: 100vh;
 
-    grid-template-columns: minmax(10em, 20em) 2fr 2fr 1fr;
-    grid-template-rows: $grid-header-height auto $grid-footer-height;
-    grid-template-areas:
-        'header header header header'
-        'sidebar content content right-sidebar'
-        'footer footer footer footer';
-    grid-gap: $grid-gap;
+	grid-template-columns: minmax(10em, 20em) 2fr 2fr 1fr;
+	grid-template-rows: $grid-header-height auto $grid-footer-height;
+	grid-template-areas:
+		'header header header header'
+		'sidebar content content right-sidebar'
+		'footer footer footer footer';
+	grid-gap: $grid-gap;
 
-    align-items: start;
+	align-items: start;
 
-    .header-area {
-        grid-area: header;
-        padding-left: $grid-gap;
-        // background-color: $accent;
+	.header-area {
+		grid-area: header;
+		padding-left: $grid-gap;
+		// background-color: $accent;
 
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-    }
+		position: sticky;
+		top: 0;
+		z-index: 1000;
+	}
 
-    .side-nav-area {
-        grid-area: sidebar;
-        padding-left: $grid-gap;
+	.side-nav-area {
+		grid-area: sidebar;
+		padding-left: $grid-gap;
 
-        // position: sticky;
-        // height: 75vh;
-        // top: calc($grid-header-height + $grid-gap);
+		// position: sticky;
+		// height: 75vh;
+		// top: calc($grid-header-height + $grid-gap);
 
-        position: fixed;
-        top: $grid-header-height + $grid-gap;
-        bottom: 0;
-    }
+		position: fixed;
+		top: $grid-header-height + $grid-gap;
+		bottom: 0;
+	}
 
-    .content-area {
-        grid-area: content;
-        justify-items: center;
+	.content-area {
+		grid-area: content;
+		justify-items: center;
 
-        // &>h1:not(:first-child) {
-        h1 {
-            margin-top: 100px;
-        }
-    }
+		// &>h1:not(:first-child) {
+		h1 {
+			margin-top: 100px;
+		}
+	}
 }
 
 @media only screen and (max-width: 768px) {
-    .grid-container {
-        grid-template-columns: 1fr 1fr;
-        grid-template-areas:
-            'header header'
-            'content content'
-            'footer footer ';
-    }
+	.grid-container {
+		grid-template-columns: 1fr 1fr;
+		grid-template-areas:
+			'header header'
+			'content content'
+			'footer footer ';
+	}
 
-    .side-nav-area {
-        display: none;
-    }
+	.side-nav-area {
+		display: none;
+	}
 
-    .content-area {
-        padding: 10px;
-    }
+	.content-area {
+		padding: 10px;
+	}
 }

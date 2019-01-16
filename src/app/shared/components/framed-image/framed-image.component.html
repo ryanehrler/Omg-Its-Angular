@@ -1,14 +1,14 @@
 <div class="framed-container">
-    <mat-card [style.max-width.px]="maxWidth">
-        <mat-card-header>
-            <mat-card-title>Tip</mat-card-title>
-        </mat-card-header>
-        <img mat-card-image #img [lazyLoad]="src" (onLoad)="imageLoad($event)" />
-        <mat-card-content>
-            <mat-spinner *ngIf="loading" mode="indeterminate"></mat-spinner>
-            <div *ngIf="!loading" class="text-content">
-                <ng-content></ng-content>
-            </div>
-        </mat-card-content>
-    </mat-card>
+	<mat-card [style.max-width.px]="maxWidth">
+		<mat-card-header>
+			<mat-card-title>Tip</mat-card-title>
+		</mat-card-header>
+		<img mat-card-image #img [lazyLoad]="src" (onLoad)="imageLoad($event)" />
+		<mat-card-content>
+			<mat-spinner *ngIf="loading" mode="indeterminate"></mat-spinner>
+			<div *ngIf="!loading" class="text-content">
+				<ng-content></ng-content>
+			</div>
+		</mat-card-content>
+	</mat-card>
 </div>
