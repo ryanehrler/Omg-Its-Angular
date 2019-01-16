@@ -17,10 +17,14 @@ $main-app-theme: mat-dark-theme($app-primary, $app-accent, $app-warn);
 
 	.header-area {
 		color: mat-color($foreground, text);
-		background-color: mat-color($background, app-bar);
+		background-color: mat-color($accent, 800);
 	}
 
 	.grid-container {
 		background-color: mat-color($background, background);
+	}
+
+	.mat-expansion-panel {
+		background-color: mat-color($accent, 800);
 	}
 }
