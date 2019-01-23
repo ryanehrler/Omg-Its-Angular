@@ -1,1 +1,57 @@
-<ngx-syntax-highlighter [code]="typescript"></ngx-syntax-highlighter>
+<h1>Angular Building Blocks</h1>
+<app-body-content>
+	<p>
+		An Angular application is composed of several different types of building
+		blocks. Each block serves a purpose and accomplishes different goals. You
+		put these blocks together to build a
+		<app-external-link href="https://msdn.microsoft.com/en-us/magazine/dn463786.aspx">
+			Single Page Application </app-external-link>. If you are coming from an AngularJS background you will be familiar
+		with
+		most of these terms. Below I've listed the most common blocks as well as
+		some uncommon ones.
+	</p>
+	<h3>Most Common</h3>
+	<app-body-content>
+		<button mat-raised-button color="primary">Module</button>
+		<button mat-raised-button color="primary">Component</button>
+		<button mat-raised-button color="primary">Service</button>
+	</app-body-content>
+	<h3>Less Common</h3>
+	<app-body-content>
+		<button mat-raised-button color="primary">Directive</button>
+		<button mat-raised-button color="primary">Pipe</button>
+		<button mat-raised-button color="primary">Guard</button>
+	</app-body-content>
+	<h3>From Typescript</h3>
+	<app-body-content>
+		<p>
+			These are not specific to Angular but thought it would be important to
+			list them since we will be using them often and can be generated from the
+			Angular CLI.
+		</p>
+		<button mat-raised-button color="primary">Class</button>
+		<button mat-raised-button color="primary">Enum</button>
+		<button mat-raised-button color="primary">Interface</button>
+	</app-body-content>
+</app-body-content>
+
+<h1>Most Common</h1>
+<app-body-content>
+	<button mat-raised-button color="primary">Module</button>
+	<p>
+		An (Angular) Module, otherwise known as NgModule, is the basic organization block of angular. NgModules glue your app
+		together and give your application a virtual structure. Another useful way of thinking about NgModules is a
+		container. For example, if you create a component (or whatever) you will access that component through the NgModule
+		you will not directly reference the component. More on this later. Also be sure to
+		not confuse NgModules with
+		<app-external-link href="https://www.typescriptlang.org/docs/handbook/modules.html">Typescript Modules</app-external-link>
+		or <app-external-link href="https://developers.google.com/web/fundamentals/primers/modules">Javascript
+			Modules</app-external-link>. That isn't say Angular doesn't use the Module system, it absolutely does! Take a look
+		below at the CoreModule for Omg, It's Angular! application.
+	</p>
+	<app-frameless-image src="../../../../assets/building_blocks/core_module.png"></app-frameless-image>
+	<p>Don't get caught up in all the details of an NgModule. We will cover the inner workings of an NgModule later. The
+		key takeaway is NgModules give us a way to organize our application.</p>
+	<button mat-raised-button color="primary">Component</button>
+	<p></p>
+</app-body-content>

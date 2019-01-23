@@ -6,7 +6,7 @@ import {
   Language,
   NgxHighlightJsModule,
   SyntaxStyle
-} from 'ngx-syntax-highlighter';
+  } from 'ngx-syntax-highlighter';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { SharedModule } from '../shared/shared.module';
@@ -21,6 +21,7 @@ const syntaxHighlighterConfig: HighlightJsConfig = {
     Language.BASH
   ]
 };
+
 @NgModule({
   imports: [
     CommonModule,
