@@ -1,3 +1,15 @@
+<h2>Goals for this section</h2>
+<ul>
+	<li>
+		Gain an introductory knowledge of the building blocks that make up an Angular
+		application.
+	</li>
+	<li>
+		Gain a sense of familiarity when you see the terms Module, Component, and
+		Service.
+	</li>
+</ul>
+
 <h1>Angular Building Blocks</h1>
 <app-body-content>
 	<p>
@@ -35,23 +47,106 @@
 	</app-body-content>
 </app-body-content>
 
-<h1>Most Common</h1>
+<h1>Dig Deeper: Most Common</h1>
 <app-body-content>
+	<!-- Module Section -->
 	<button mat-raised-button color="primary">Module</button>
 	<p>
-		An (Angular) Module, otherwise known as NgModule, is the basic organization block of angular. NgModules glue your app
-		together and give your application a virtual structure. Another useful way of thinking about NgModules is a
-		container. For example, if you create a component (or whatever) you will access that component through the NgModule
-		you will not directly reference the component. More on this later. Also be sure to
-		not confuse NgModules with
+		An (Angular) Module, otherwise known as NgModule (en-gee-Module), is the
+		basic organization block of angular. Modules glue your app together and give
+		your app a virtual structure. Another useful way of thinking about modules
+		is a container. For example, if you create a component (or whatever) you
+		will then put the component inside a module. More on this later. Also be
+		sure to not confuse NgModules with
 		<app-external-link href="https://www.typescriptlang.org/docs/handbook/modules.html">Typescript Modules</app-external-link>
-		or <app-external-link href="https://developers.google.com/web/fundamentals/primers/modules">Javascript
-			Modules</app-external-link>. That isn't say Angular doesn't use the Module system, it absolutely does! Take a look
+		or
+		<app-external-link href="https://developers.google.com/web/fundamentals/primers/modules">Javascript Modules</app-external-link>.
+		That isn't to say Angular doesn't use js modules, it absolutely does! Js
+		modules just aren't very important for this discussion. Let's take a look
 		below at the CoreModule for Omg, It's Angular! application.
 	</p>
-	<app-frameless-image src="../../../../assets/building_blocks/core_module.png"></app-frameless-image>
-	<p>Don't get caught up in all the details of an NgModule. We will cover the inner workings of an NgModule later. The
-		key takeaway is NgModules give us a way to organize our application.</p>
+	<app-frameless-image src="../../../../assets/building_blocks/core_module.jpg"></app-frameless-image>
+	<p>
+		Don't get caught up in all the details for modules right now. We will cover
+		the inner workings of modules later. The key takeaway is Modules give us a
+		way to organize our application, and this is done through the metadata you
+		see above (ie. imports, exports, providers).
+	</p>
+	<h3>Module Summary</h3>
+	<ul>
+		<li>
+			The term <b>NgModule</b> and <b>Module</b> are the same for the scope of an Angular discussion (aka this guide).
+		</li>
+		<li>Modules organize your application.</li>
+		<li>Modules can be thought of as containers for other Angular blocks.</li>
+	</ul>
+
+	<!-- Component Section -->
 	<button mat-raised-button color="primary">Component</button>
-	<p></p>
+	<p>
+		Components, Components, Components. Components are the main building block of your angular application. They are the
+		view. They are the alpha. They are the omega ... wait what?!? Okay seriously, components are one of the building
+		blocks you will be working with the most. They contain your html, scss, and the code behind that drives the behavior
+		of that html. A component can be made up of other components. So components are used to build pages as well as the
+		individual parts that make up a page. Let's take a look at the <b>FramelessImageComponent</b> below!
+	</p>
+	<app-pro-tip>
+		Angular uses a <b>Component Based Architecture</b> and does not technically fall under the <b>MVC</b> or <b>MV*</b>
+		patterns; although parallels can be drawn. If you have not heard of the MVC pattern then no worries. It's not
+		important to understand since Angular doesn't use it.
+	</app-pro-tip>
+	<app-frameless-image src="../../../../assets/building_blocks/component_files.png"></app-frameless-image>
+
+	<p>
+		To put things into perspective the image you see above is an angular component. So what is this component doing and
+		why is it cool .. I mean powerful?
+	</p>
+	<ol>
+		<li>
+			The component is encapsulating all the parts needed to diplay an image in the center of the screen. Html,
+			Typescript, CSS.
+		</li>
+		<li>The component is re-usable in any part of our application.</li>
+		<li>
+			The component Easily modifiable. If we want to update functionality or change the look we can modify the code in one
+			place and our entire application will be updated.
+		</li>
+	</ol>
+
+	<p>
+		The list above paints a pretty rosie picture, so I want to inject some questions into your head which we will
+		slowly examine over the course of this guide.
+	</p>
+	<ul>
+		<li>How do I manage all of these components?</li>
+		<li>When do I create a new compnent versus writing the functionality into the current component?</li>
+		<ul>
+			<li>Remember components can be nested so you will always have a root (or page) component.</li>
+		</ul>
+	</ul>
+
+	<p>
+		The <b>FramelessImageComponent</b> shown above isn't all that impressive but components can be as
+		complex or simple as you need. Okay, let's take a quick look at the code.
+	</p>
+
+	<app-frameless-image src="../../../../assets/building_blocks/component_ts.jpg"></app-frameless-image>
+	<app-frameless-image src="../../../../assets/building_blocks/component_html_scss.jpg"></app-frameless-image>
+
+	<p>
+		If you look at the .ts file above (the one with the @Component) and think "wow this looks familiar". Then you
+		would be correct. Scroll back up and look at the Module code again. You will notice each of these building blocks are
+		just classes with a decorator (ie @Component, @Module, ect). If you are interested in learning more:
+		<app-external-link href="https://www.typescriptlang.org/docs/handbook/decorators.html">Typescript
+			Decorators</app-external-link>. Remember Angular is just a framework built using typescript. In other words, its
+		just code that runs along side your code and gives you tools to create a Single Page Application.
+	</p>
+	<p>.. and again don't worry about absorbing everything right now. The takeaway here is that Components build your
+		view.</p>
+
+	<h3>Component Summary</h3>
+	<ul>
+		<li>Components are the primary building block for the UI and it's behavior.</li>
+		<li>Components contain an html file, css file, and a typescript file.</li>
+	</ul>
 </app-body-content>
