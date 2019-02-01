@@ -47,7 +47,7 @@
 	</app-body-content>
 </app-body-content>
 
-<h1>Dig Deeper: Most Common</h1>
+<h1>Dig Deeper: Modules</h1>
 <app-body-content>
 	<!-- Module Section -->
 	<button mat-raised-button color="primary">Module</button>
@@ -80,8 +80,9 @@
 		<li>Modules organize your application.</li>
 		<li>Modules can be thought of as containers for other Angular blocks.</li>
 	</ul>
-
-	<!-- Component Section -->
+</app-body-content>
+<h1>Dig Deeper: Components</h1>
+<app-body-content>
 	<button mat-raised-button color="primary">Component</button>
 	<p>
 		Components, Components, Components. Components are the main building block of your angular application. They are the
@@ -119,9 +120,9 @@
 	</p>
 	<ul>
 		<li>How do I manage all of these components?</li>
-		<li>When do I create a new compnent versus writing the functionality into the current component?</li>
+		<li>When do I create a new component versus writing the functionality into the current component?</li>
 		<ul>
-			<li>Remember components can be nested so you will always have a root (or page) component.</li>
+			<li>Remember components can be nested (hierarchical) so you will always have a root (or page) component.</li>
 		</ul>
 	</ul>
 
@@ -148,5 +149,89 @@
 	<ul>
 		<li>Components are the primary building block for the UI and it's behavior.</li>
 		<li>Components contain an html file, css file, and a typescript file.</li>
+	</ul>
+</app-body-content>
+
+<h1>Dig Deeper: Services</h1>
+<app-body-content>
+	<button mat-raised-button color="primary">Service</button>
+	<p>
+		Last but not least, services. Services manage your business logic as well as giving you a mechanism to communicate
+		between components. But what about Input/Output variables on components? Data binding (input/output) on components
+		is useful for passing information in when the child component needs all or part of the model from the parent. However
+		other situations arise where data binding will not get the job done. I generally default to services for my
+		communication as this allows me to:
+	</p>
+	<ul>
+		<li>Create loosely coupled components.</li>
+		<li>Communicate between adjacent components (one's that aren't parent/child).</li>
+		<li>Persist data between components.</li>
+		<li>Persist data between routes/pages.</li>
+	</ul>
+
+	<p>When do I use Input/Output variables?</p>
+	<ul>
+		<li>For a child component which will use/modify part of the parent data object.</li>
+		<li>Events only used between parent child.</li>
+		<ul>
+			<li>
+				For example, a click event fired by a component. Usually the only thing interested in a click event is the parent
+				component. Trying
+				to communicate a click event using a service would be unnecessarily complex.
+			</li>
+		</ul>
+	</ul>
+
+	<p>
+		Unfortunately this is one of those things where there are no hard and fast rules. At first you will be confused and
+		unsure. In time the distinction will make more and more sense. We will touch on this again in the services section
+		with some examples.
+	</p>
+
+	<p>
+		I just want to make a quick point on <i>business logic</i> and <i>component logic</i>. What is business
+		logic? Business logic is any logic/code which manipulates data or returns information in a way that does not relate
+		to the UI. An example of business logic would be calculating the total cost of a pizza. An example of UI (component)
+		logic is hide x dropdown when y is selected. It's a good practice to keep these seperate - here are some benefits.
+	</p>
+	<ul>
+		<li>Helps you share logic between componets.</li>
+		<li>Helps you maintain <app-external-link href="https://en.wikipedia.org/wiki/Single_responsibility_principle">Single
+				Responsibility</app-external-link>.
+		</li>
+		<ul>
+			<li>I don't want to dig too deep into the single responsibility principal since you can find a plethora of
+				information on the topic by googling.</li>
+			<li>I can give a quick example of why it's important though.</li>
+			<ul>
+				<li>Imagine you build a component which gives all the options for constructing a pizza.</li>
+				<li>Within this component you have a bunch of different UI rules and branching logic to manage the UI.</li>
+				<li>
+					Also within this component you are calculating the cost of the pizza and within this calculate method you
+					set some boolean values which manipulate the UI.
+				</li>
+				<li>Now your boss asks you, hey can we run these calculations over on y page?</li>
+				<li>
+					Or your boss says to you. Hey we didn't like our last design so we redesigned that page and we need to
+					update the existing page with the latest design.
+				</li>
+			</ul>
+			<li>How do services help in the above example?</li>
+			<ul>
+				<li>Image that same component above but with a <b>PizzaService</b> class.</li>
+				<li>This PizzaService class has a method on it called <b>Calculate(pizzaToCalculate: Pizza)</b>.</li>
+				<li>Instead of your component worrying about the calculation it now just calls pizzaService.Calculate().</li>
+				<li>
+					Now when your boss comes to you with either of the above statements you don't have to worry. You can modify the
+					page without worrying about breaking the calculation portion. Conversely you can update the calculation code
+					without worrying about updating a specific page.
+				</li>
+			</ul>
+		</ul>
+		<li>
+			More easily test your code; otherwise known as Unit Testing. Operative word here is Unit, your tests should only
+			test one unit of code.
+		</li>
+		<li> More easily test your UI code; otherwise known as UI Testing.</li>
 	</ul>
 </app-body-content>
