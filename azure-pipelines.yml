@@ -12,11 +12,14 @@ steps:
       versionSpec: '8.x'
     displayName: 'Install Node.js'
 
-  - script: |
-      npm install -g @angular/cli
-      npm install
-      ng build --prod
-    displayName: 'npm install and build'
+  - script: npm install -g @angular/cli
+    displayName: 'Install Angular CLI'
+
+  - script: npm install
+    displayName: 'Npm Install'
+
+  - script: ng build --prod
+    displayName: 'Angular Build'
 
   - task: CopyFiles@2
     inputs:
